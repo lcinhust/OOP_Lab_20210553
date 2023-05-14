@@ -1,0 +1,18 @@
+1. Try to add a method addDigitalVideoDisc which allows to pass an arbitrary number of arguments for dvd. 
+Compare to an array parameter. What do you prefer in this case?
+When adding a method to pass an arbitrary number of arguments for DVD, using varargs syntax has advantages such as convenience 
+and flexibility, but also has disadvantages such as potential performance and memory usage issues. The choice between using 
+varargs syntax or passing an array parameter depends on the specific requirements of the application.
+
+2. Is java a Pass by Value or a Pass by Reference Programming language
+Java is a pass-by-value programming language, meaning that when a method is called, copies of the argument values are passed 
+to the method, not references to the original objects.
+
+3. After the call of swap(jungleDVD, cinderellaDVD) why does the title of these two objects still remain?
+The swap method only swaps the contents of the objects referred to by copies of the original references passed as arguments, 
+the original objects themselves. Therefore, the original references and their titles remain unchanged after the method call.
+
+4. After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle()), why is the title of the JungleDVD changed?
+The changeTitle method changes the title attribute of the DigitalVideoDisc object referred to by jungleDVD by directly 
+accessing the actual attribute, not a copy of it. The new title passed as an argument is used to change the value of the 
+title attribute, resulting in the title of jungleDVD being changed.

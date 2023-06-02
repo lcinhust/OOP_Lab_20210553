@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
-public class CompactDisc extends Media {
+public class CompactDisc extends Media implements Playable {
     private String artist;
-    private ArrayList<Track> tracks;
+    private ArrayList<Track> tracks = new ArrayList<Track>();
 
     public CompactDisc() {
         super();
@@ -30,5 +30,12 @@ public class CompactDisc extends Media {
 
     public String getArtist() {
         return artist;
+    }
+
+    @Override
+    public void play() {
+        for (Track track : tracks) {
+            track.play();
+        }
     }
 }

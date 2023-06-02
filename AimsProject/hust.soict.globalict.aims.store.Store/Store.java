@@ -1,40 +1,17 @@
-public class Store {
-    private DigitalVideoDisc[] itemsInStore;
+import java.util.ArrayList;
 
-    public Store() {
-        itemsInStore = new DigitalVideoDisc[0];
+public class Store extends Cart{
+    private ArrayList<Media> itemsInStore = new ArrayList<Media>();
+
+    public void addMedia(Media media) {
+        if (!itemsInStore.contains(media)) {
+            itemsInStore.add(media);
+        }
     }
 
-    public void addDVD(DigitalVideoDisc dvd) {
-        DigitalVideoDisc[] newItemsInStore = new DigitalVideoDisc[itemsInStore.length + 1];
-        for (int i = 0; i < itemsInStore.length; i++) {
-            newItemsInStore[i] = itemsInStore[i];
+    public void removeMedia(Media media) {
+        if (!itemsInStore.contains(media)) {
+            itemsInStore.remove(media);
         }
-        newItemsInStore[itemsInStore.length] = dvd;
-        itemsInStore = newItemsInStore;
-    }
-
-    public void removeDVD(DigitalVideoDisc dvd) {
-        if (itemsInStore.length==0){
-            System.out.println("The store is currently emptied.");
-        }
-        DigitalVideoDisc[] newItemsInStore = new DigitalVideoDisc[itemsInStore.length - 1];
-        int j = 0;
-        for (int i = 0; i < itemsInStore.length; i++) {
-            if (!itemsInStore[i].equals(dvd)) {
-                newItemsInStore[j] = itemsInStore[i];
-                j++;
-            }
-        }
-        itemsInStore = newItemsInStore;
-    }
-
-    public void print() {
-        System.out.println("***********************CART********************************");
-        System.out.println("DVD in store:");
-        for (int i = 0; i < itemsInStore.length; ++i) {
-            System.out.println(itemsInStore[i].getId() + ". " + itemsInStore[i].toString());
-        }
-        System.out.println("***********************************************************");
     }
 }

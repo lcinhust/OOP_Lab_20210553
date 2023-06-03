@@ -3,6 +3,11 @@ public class Media {
     private String title;
     private String category;
     private float cost;
+
+    public boolean equals(Media media){
+        return this.getTitle() == media.getTitle();
+    }    
+
     public int getId() {
         return id;
     }

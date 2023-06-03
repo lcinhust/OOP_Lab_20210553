@@ -7,16 +7,20 @@ public class Track implements Playable{
         this.length = length;
     }
     
-    public String getTitle() {
-        return title;
-    }
-    public int getLength() {
-        return length;
-    }
+    public boolean equals(Track track){
+        return this.getTitle() == track.getTitle() && this.getLength() == track.getLength();
+    }    
 
     @Override
     public void play() {
         System.out.println("Playing DVD: " + this.getTitle());
         System.out.println("DVD length: " + this.getLength());
+    }
+
+    public String getTitle() {
+        return title;
+    }
+    public int getLength() {
+        return length;
     }
 }

@@ -1,15 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Book extends Media{
+public class Book extends Media {
     private List<String> authors = new ArrayList<String>();
 
-    public Book() {
-        super();
-    }
-
-    public Book(String title) {
-        this.setTitle(title);
+    public Book(String title, String category, float cost) {
+        super(title, category, cost);
     }
 
     public void addAuthor(String authorName) {

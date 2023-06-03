@@ -1,13 +1,26 @@
+import java.util.Objects;
+
 public class Media {
     private int id; 
     private String title;
     private String category;
     private float cost;
 
-    public boolean equals(Media media){
-        return this.getTitle() == media.getTitle();
-    }    
+    @Override
+    public boolean equals(Object o) {
+        if (o == this) {
+            return true;
+        }
 
+        if (!(o instanceof Media)) {
+            return false;
+        }
+
+        Media m = (Media) o;
+
+        return id == m.id && Objects.equals(title, m.title) &&
+                Objects.equals(category, m.category) && cost == m.cost;
+    }
     public int getId() {
         return id;
     }

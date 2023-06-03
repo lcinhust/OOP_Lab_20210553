@@ -1,4 +1,4 @@
-public class Track implements Playable{
+public class Track implements Playable {
     private String title;
     private int length;
 
@@ -6,21 +6,30 @@ public class Track implements Playable{
         this.title = title;
         this.length = length;
     }
-    
-    public boolean equals(Track track){
-        return this.getTitle() == track.getTitle() && this.getLength() == track.getLength();
-    }    
 
     @Override
-    public void play() {
-        System.out.println("Playing DVD: " + this.getTitle());
-        System.out.println("DVD length: " + this.getLength());
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (!(obj instanceof Track)) {
+            return false;
+        }
+        Track other = (Track) obj;
+        return title.equals(other.title) && length == other.length;
     }
 
     public String getTitle() {
         return title;
     }
+
     public int getLength() {
         return length;
+    }
+
+    @Override
+    public void play() {
+        System.out.println("Playing DVD: " + this.getTitle());
+        System.out.println("DVD length: " + this.getLength());
     }
 }

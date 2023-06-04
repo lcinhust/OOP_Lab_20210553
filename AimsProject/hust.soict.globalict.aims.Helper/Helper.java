@@ -97,7 +97,7 @@ public class Helper {
         return id;
     }
 
-    public static void play(Media media){
+    public static void play(Media media) {
         if (media instanceof Book) {
             System.out.println("Media is Book cannot play");
         }
@@ -119,14 +119,14 @@ public class Helper {
         }
     }
 
-    public static Media scanTitleFindMedia(){
-        String title ;
+    public static Media scanTitleFindMedia() {
+        String title;
         Media media;
-        do{
-            title= scanTitle();
-            media =store.findMediaByTitle(title);
+        do {
+            title = scanTitle();
+            media = store.findMediaByTitle(title);
 
-        }while(media == null);
+        } while (media == null);
 
         return media;
     }

@@ -1,0 +1,5 @@
+14.	Update the Aims class
+The Aims class must be updated to handle any exceptions generated when the play() methods are called. What happens when you 
+don’t update for them to catch?
+If this update is not implemented, an error will occur stating that the exception is not handled. Consequently, not only will 
+the Media class stop functioning, but other classes that rely on the .play() method will also be affected by this error.

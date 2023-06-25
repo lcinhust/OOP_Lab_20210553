@@ -1,12 +1,5 @@
 {
     "java.project.sourcePaths": [
-        "AimsProject/hust.soict.globalict.test.store.StoreTest",
-        "AimsProject/hust.soict.globalict.test.disc.TestPassingParameter",
-        "AimsProject/hust.soict.globalict.test.cart.CartTest",
-        "AimsProject/hust.soict.globalict.aims.store.Store",
-        "AimsProject/hust.soict.globalict.aims.media",
-        "AimsProject/hust.soict.globalict.aims.cart.Cart",
-        "AimsProject/hust.soict.globalict.aims.Aims",
-        "AimsProject/hust.soict.globalict.aims.Helper"
+        "GUIProject"
     ]
 }
